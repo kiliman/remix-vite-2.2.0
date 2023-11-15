@@ -1,5 +1,4 @@
 import type { MetaFunction } from '@remix-run/node'
-import { generatePath } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,9 +8,6 @@ export const meta: MetaFunction = () => {
 }
 
 export default function Index() {
-  const path = generatePath('/test/:id', { id: 'this is a test' })
-  const url = new URL(path, 'http://localhost')
-
   return (
     <div>
       <div className="flex p-8 gap-8 items-baseline bg-blue-300">
